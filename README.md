@@ -128,7 +128,7 @@ Optimiza la selección de proyectos de inversión.
 - Peso y ganancia deben ser números positivos
 - Manejo de errores para datos inválidos
 
-## 📊 Ejemplos de Uso
+##  Ejemplos de Uso
 
 ###  Caso de Prueba 1: Caso Básico
 **Entrada:**
@@ -177,7 +177,7 @@ Optimiza la selección de proyectos de inversión.
 }
 ```
 
-## 🧪 Pruebas
+##  Pruebas
 
 ```bash
 # Ejecutar todas las pruebas
