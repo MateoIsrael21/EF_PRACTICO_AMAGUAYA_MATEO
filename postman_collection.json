@@ -1,0 +1,161 @@
+{
+  "info": {
+    "name": "Portfolio Optimization API",
+    "description": "Colección de Postman para probar el microservicio de optimización de portafolio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Caso Básico",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": 10000,\n  \"objetos\": [\n    {\"nombre\": \"A\", \"peso\": 2000, \"ganancia\": 1500},\n    {\"nombre\": \"B\", \"peso\": 4000, \"ganancia\": 3500},\n    {\"nombre\": \"C\", \"peso\": 5000, \"ganancia\": 4000},\n    {\"nombre\": \"D\", \"peso\": 3000, \"ganancia\": 2500}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Caso Éxito 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": 10000,\n  \"objetos\": [\n    {\"nombre\": \"Fondo_A\", \"peso\": 2000, \"ganancia\": 1500},\n    {\"nombre\": \"Fondo_B\", \"peso\": 4000, \"ganancia\": 3500},\n    {\"nombre\": \"Fondo_C\", \"peso\": 5000, \"ganancia\": 4000},\n    {\"nombre\": \"Fondo_D\", \"peso\": 3000, \"ganancia\": 2500},\n    {\"nombre\": \"Fondo_E\", \"peso\": 1500, \"ganancia\": 1800}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Caso Éxito 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": 8000,\n  \"objetos\": [\n    {\"nombre\": \"Acción_X\", \"peso\": 1000, \"ganancia\": 800},\n    {\"nombre\": \"Acción_Y\", \"peso\": 2500, \"ganancia\": 2200},\n    {\"nombre\": \"Acción_Z\", \"peso\": 3000, \"ganancia\": 2800},\n    {\"nombre\": \"Bono_P\", \"peso\": 4000, \"ganancia\": 3000},\n    {\"nombre\": \"Bono_Q\", \"peso\": 1500, \"ganancia\": 1200}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Caso Éxito 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": 5000,\n  \"objetos\": [\n    {\"nombre\": \"Cripto_1\", \"peso\": 500, \"ganancia\": 700},\n    {\"nombre\": \"Cripto_2\", \"peso\": 800, \"ganancia\": 1000},\n    {\"nombre\": \"ETF_1\", \"peso\": 1500, \"ganancia\": 1300},\n    {\"nombre\": \"ETF_2\", \"peso\": 2000, \"ganancia\": 1800},\n    {\"nombre\": \"NFT_Alpha\", \"peso\": 3000, \"ganancia\": 2500}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Error Capacidad Negativa",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": -1000,\n  \"objetos\": [\n    {\"nombre\": \"A\", \"peso\": 100, \"ganancia\": 50}\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    },
+    {
+      "name": "Optimizar - Error Objetos Vacíos",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"capacidad\": 1000,\n  \"objetos\": []\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/optimizar",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["optimizar"]
+        }
+      }
+    }
+  ]
+}
