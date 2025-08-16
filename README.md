@@ -1,44 +1,26 @@
-# 🎯 Microservicio de Optimización de Portafolio de Inversiones
+# Microservicio de Optimización de Portafolio de Inversiones
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org)
 [![Flask](https://img.shields.io/badge/Flask-2.3.3-green.svg)](https://flask.palletsprojects.com)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com)
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto implementa un **microservicio completo** que resuelve el problema de la mochila (knapsack problem) para optimizar la asignación de recursos en un portafolio de inversiones con restricción presupuestaria.
 
-### 🎯 Características Principales
+### Características Principales
 
-- ✅ **Algoritmo de Programación Dinámica** para optimización óptima
-- ✅ **API REST** con validación completa de datos
-- ✅ **Interfaz Web Moderna** con React/TypeScript
-- ✅ **Dockerización Completa** con docker-compose
-- ✅ **Suite de Pruebas** con 15+ casos de prueba
-- ✅ **Documentación Completa** con ejemplos de uso
+**Algoritmo de Programación Dinámica** para optimización óptima
+**API REST** con validación completa de datos
+**Interfaz Web Moderna** con React/TypeScript
+**Dockerización Completa** con docker-compose
+**Suite de Pruebas** con 15+ casos de prueba
+ **Documentación Completa** con ejemplos de uso
 
-## 🏗️ Estructura del Proyecto
 
-```
-portfolio-optimization-service/
-├── 📁 backend/                 # Microservicio Python/Flask
-│   ├── 🐍 app.py              # Aplicación principal
-│   ├── 📋 requirements.txt    # Dependencias Python
-│   ├── 🐳 Dockerfile         # Configuración Docker
-│   └── 🧪 tests/             # Pruebas unitarias
-├── 📁 frontend/              # Interfaz React/TypeScript
-│   ├── 📁 src/
-│   ├── 📋 package.json
-│   └── 🐳 Dockerfile
-├── 🐳 docker-compose.yml     # Orquestación de servicios
-├── 📖 README.md             # Documentación principal
-├── 📚 API_DOCUMENTATION.md  # Especificación de API
-├── 📦 postman_collection.json # Colección Postman
-└── 🚀 start.sh/start.bat    # Scripts de inicio
-```
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Backend**: Python 3.9+, Flask 2.3.3, Programación Dinámica
 - **Frontend**: React 18.2.0, TypeScript 4.7.4, CSS3
@@ -46,9 +28,9 @@ portfolio-optimization-service/
 - **Pruebas**: pytest, cobertura de código
 - **Documentación**: Markdown, Postman Collection
 
-## 🚀 Instalación y Despliegue
+## Instalación y Despliegue
 
-### ⚡ Instalación Rápida (Recomendado)
+### Instalación Rápida (Recomendado)
 
 ```bash
 # 1. Clonar el repositorio
@@ -65,7 +47,7 @@ chmod +x start.sh
 # 3. ¡Listo! Abre http://localhost:3000
 ```
 
-### 🐳 Opción 1: Usando Docker Compose (Recomendado)
+### Opción 1: Usando Docker Compose (Recomendado)
 ```bash
 # Clonar el repositorio
 git clone https://github.com/USERNAME/portfolio-optimization-service.git
@@ -148,7 +130,7 @@ Optimiza la selección de proyectos de inversión.
 
 ## 📊 Ejemplos de Uso
 
-### 🎯 Caso de Prueba 1: Caso Básico
+###  Caso de Prueba 1: Caso Básico
 **Entrada:**
 ```json
 {
@@ -171,7 +153,7 @@ Optimiza la selección de proyectos de inversión.
 }
 ```
 
-### 🎯 Caso de Prueba 2: Máximo Aprovechamiento
+###  Caso de Prueba 2: Máximo Aprovechamiento
 **Entrada:**
 ```json
 {
@@ -206,19 +188,3 @@ cd backend
 python -m pytest tests/ -v
 ```
 
-## 📚 Documentación Adicional
-
-- 📖 **[API Documentation](./API_DOCUMENTATION.md)** - Especificación completa de la API
-- 📦 **[Postman Collection](./postman_collection.json)** - Colección para probar la API
-- 🐳 **[Docker Setup](./docker-compose.yml)** - Configuración de contenedores
-
-## 👨‍💻 Autor
-
-**Universidad de las Fuerzas Armadas ESPE**  
-Departamento de Ciencias de la Computación  
-Carrera de Ingeniería en Tecnologías de la Información - En Línea  
-**Arquitectura de Software** - Examen Final
-
----
-
-⭐ **¡Si te gustó el proyecto, dale una estrella en GitHub!**
